@@ -1,9 +1,6 @@
-const events = [
-  { id: 1, title: "Event One" },
-  { id: 2, title: "Event Two" },
-  { id: 3, title: "Event Three" }
-];
+import data from "../data";
 
-module.exports = (req, res) => {
-  res.json(events[0]);
+export default (req, res) => {
+  const event = data.events.find(event => event.id == req.query.event);
+  res.json(event);
 };

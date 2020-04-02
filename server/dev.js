@@ -1,5 +1,5 @@
 import express from "express";
-const apiRoutes = require("./routes");
+import * as apiRoutes from "./routes";
 
 const app = express();
 
@@ -12,4 +12,4 @@ app.get("*", (req, res) => {
 
 app.listen(7777, () => console.log("Server running at http://localhost:7777"));
 
-module.exports = app;
+export default app;

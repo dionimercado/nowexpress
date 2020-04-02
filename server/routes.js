@@ -1,7 +1,2 @@
-const events = require("./api/events");
-const event = require("./api/events/[event].js");
-
-module.exports = {
-  events,
-  event
-};
+export { default as events } from "./api/events";
+export { default as event } from "./api/events/[event].js";
